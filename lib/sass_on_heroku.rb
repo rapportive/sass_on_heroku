@@ -44,7 +44,7 @@ class SassOnHeroku
 		[
 			200,
 			{
-				'Cache-Control'  => 'public, max-age=86400',
+				'Cache-Control'  => 'no-cache',
 				'Content-Length' => File.size(css_file).to_s,
 				'Content-Type'   => 'text/css'
 			},
