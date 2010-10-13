@@ -57,7 +57,7 @@ class SassOnHeroku
 	end
 
 	def stylesheets
-		@stylesheets ||= Dir[css_location_on_heroku + '/*.css'].map { |f| f.split('/').last }
+		@stylesheets ||= Dir[css_location_on_heroku + '/**/*.css'].map { |f| f.sub(css_location_on_heroku + '/', '') }
 	end
 
 	def css_request_regexp
